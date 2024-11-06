@@ -1,0 +1,7 @@
+{
+  "name": "InfoTics",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
