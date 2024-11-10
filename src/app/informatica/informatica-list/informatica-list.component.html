@@ -1,19 +1,35 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Lista de Alumnos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list *ngIf="alumnos.length > 0; else noData">
-    <ion-item *ngFor="let alumno of alumnos">
-      <ion-label>
-        <h2>{{ alumno.Nombre }} {{ alumno.ApellidoP }} {{ alumno.ApellidoM }}</h2>
-        <p>Correo: {{ alumno.Correo }}</p>
-        <p>Teléfono: {{ alumno.NumeroT }}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Alumnos</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <table class="table-info">
+        <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Correo</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let alumno of alumnos">
+          <td>{{ alumno.Nombre }} {{ alumno.ApellidoP }} {{ alumno.ApellidoM }}</td>
+          <td>{{ alumno.NomeroT }}</td> <!-- Cambiado a NumeroT -->
+          <td>{{ alumno.Correo }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+
   <ng-template #noData>
     <p>No hay datos disponibles.</p>
   </ng-template>

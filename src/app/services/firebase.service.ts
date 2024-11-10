@@ -8,7 +8,7 @@ export interface Alumno {
   ApellidoP: string;
   Correo: string;
   Nombre: string;
-  NumeroT: string;
+  NomeroT: string;
 }
 
 @Injectable({

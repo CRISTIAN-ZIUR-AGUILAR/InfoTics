@@ -1,20 +1,27 @@
+/* Fondo del menú y del contenido */
 ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
+ion-menu {
+  --background: rgba(89, 86, 86, 0.6); /* Fondo blanco para el menú */
+  width: 260px; /* Ancho del menú */
+  padding-right: 0; /* Quitar padding extra */
+}
 
+/* Ajustes específicos para Material Design */
 ion-menu.md ion-content {
   --padding-start: 8px;
-  --padding-end: 8px;
+  --padding-end: 1px; /* Ajustamos para acercar la barra de desplazamiento */
   --padding-top: 20px;
-  --padding-bottom: 20px;
+  --padding-bottom: 10px;
 }
 
 ion-menu.md ion-list {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 ion-menu.md ion-note {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 ion-menu.md ion-list-header,
@@ -22,6 +29,7 @@ ion-menu.md ion-note {
   padding-left: 10px;
 }
 
+/* Separación entre listas en el menú */
 ion-menu.md ion-list#inbox-list {
   border-bottom: 1px solid var(--ion-background-color-step-150, #d7d8da);
 }
@@ -29,20 +37,17 @@ ion-menu.md ion-list#inbox-list {
 ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
   font-weight: 600;
-
   min-height: 20px;
 }
 
 ion-menu.md ion-list#labels-list ion-list-header {
   font-size: 16px;
-
   margin-bottom: 18px;
-
   color: #757575;
-
   min-height: 26px;
 }
 
+/* Estilos de los ítems de menú para Material Design */
 ion-menu.md ion-item {
   --padding-start: 10px;
   --padding-end: 10px;
@@ -65,6 +70,7 @@ ion-menu.md ion-item ion-label {
   font-weight: 500;
 }
 
+/* Ajustes específicos para iOS */
 ion-menu.ios ion-content {
   --padding-bottom: 20px;
 }
@@ -89,7 +95,7 @@ ion-menu.ios ion-item.selected ion-icon {
 }
 
 ion-menu.ios ion-item ion-icon {
-  font-size: 24px;
+  font-size: 24px; /* Corrección del tamaño de ícono */
   color: #73849a;
 }
 
@@ -107,13 +113,28 @@ ion-menu.ios ion-note {
   margin-bottom: 8px;
 }
 
+/* Estilos generales para etiquetas y textos */
 ion-note {
   display: inline-block;
   font-size: 16px;
-
   color: var(--ion-color-medium-shade);
 }
 
+/* Ítem seleccionado */
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+/* Ajustes en la barra de desplazamiento */
+ion-content::-webkit-scrollbar {
+  width: 6px; /* Barra delgada */
+}
+
+ion-content::-webkit-scrollbar-thumb {
+  background-color: #cccccc; /* Color de la barra de desplazamiento */
+  border-radius: 3px;
+}
+
+ion-content::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Fondo del track */
 }

@@ -1,0 +1,32 @@
+/* Estilo para el header */
+ion-toolbar[color="primary"] {
+  --background: #003366; /* Color azul institucional */
+  --color: #ffffff;
+}
+
+/* Tabla de información de alumnos */
+.table-info {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.table-info th, .table-info td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table-info th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+.table-info td {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-info tr:hover {
+  background-color: #e6f2ff; /* Color clarito al pasar el ratón */
+}
