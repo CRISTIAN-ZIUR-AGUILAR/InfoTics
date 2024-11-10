@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Alumnos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="alumnos.length > 0; else noData">
+    <ion-item *ngFor="let alumno of alumnos">
+      <ion-label>
+        <h2>{{ alumno.Nombre }} {{ alumno.ApellidoP }} {{ alumno.ApellidoM }}</h2>
+        <p>Correo: {{ alumno.Correo }}</p>
+        <p>Teléfono: {{ alumno.NumeroT }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ng-template #noData>
+    <p>No hay datos disponibles.</p>
+  </ng-template>
+</ion-content>

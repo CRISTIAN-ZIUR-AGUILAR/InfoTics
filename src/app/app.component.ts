@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { initializeApp } from "firebase/app";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
