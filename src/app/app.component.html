@@ -19,16 +19,15 @@
               <ion-icon aria-hidden="true" slot="start" name="school-outline"></ion-icon>
               <ion-label>Informática</ion-label>
             </ion-item>
+            <ion-item routerDirection="root" [routerLink]="['/informatica/formularios']" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" name="school-outline"></ion-icon>
+              <ion-label>Registro</ion-label>
+            </ion-item>
           </ion-menu-toggle>
         </ion-list>
 
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
-        </ion-list>
+
+
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>

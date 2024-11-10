@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import {InformaticaListComponent} from "./informatica/informatica-list/informatica-list.component";
+import { Platform } from "@ionic/angular";
 
 const routes: Routes = [
   {
@@ -22,4 +22,15 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+  constructor(private platform: Platform) {
+    // Redirecciona a la ruta 'informatica/formularios' en dispositivos móviles
+    this.platform.ready().then(() => {
+      if (this.platform.is('mobile') || this.platform.is('hybrid')) {
+        RouterModule.forRoot([
+          { path: '', redirectTo: 'informatica/formularios', pathMatch: 'full' }
+        ]);
+      }
+    });
+  }
+}
