@@ -15,7 +15,8 @@ const routes: Routes = [
   {
     path: 'informatica',
     loadChildren: () => import('./informatica/informatica.module').then(m => m.InformaticaModule)
-  }
+  },
+
 ];
 
 @NgModule({
