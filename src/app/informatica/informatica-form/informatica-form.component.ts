@@ -19,8 +19,9 @@ export class InformaticaFormComponent {
       ApellidoP: ['', Validators.required],
       ApellidoM: ['', Validators.required],
       Correo: ['', [Validators.required, Validators.email]],
-      NomeroT: ['', Validators.required] // Asegúrate de que coincide con la interfaz 'Alumno'
+      NumeroT: ['', Validators.required] // Todo debe estar exactamente igual en HTML y en el FormGroup
     });
+
   }
 
   onSubmit() {
