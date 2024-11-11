@@ -2,6 +2,7 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
+        <!-- Lista principal de opciones -->
         <ion-list id="inbox-list">
           <ion-list-header>TECM Valle Oaxaca</ion-list-header>
           <ion-note>951 517 0444</ion-note>
@@ -12,21 +13,39 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+
+        <!-- Sección de Informática -->
         <ion-list id="Informatica">
           <ion-list-header>Informática</ion-list-header>
+
+          <!-- Enlace para "Informática" con opción de selección exacta -->
           <ion-menu-toggle auto-hide="false">
-            <ion-item routerDirection="root" [routerLink]="['/informatica']" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item
+              routerDirection="root"
+              [routerLink]="['/informatica']"
+              lines="none"
+              detail="false"
+              routerLinkActive="selected"
+              [routerLinkActiveOptions]="{ exact: true }">
               <ion-icon aria-hidden="true" slot="start" name="school-outline"></ion-icon>
               <ion-label>Informática</ion-label>
             </ion-item>
-            <ion-item routerDirection="root" [routerLink]="['/informatica/formularios']" lines="none" detail="false" routerLinkActive="selected">
+          </ion-menu-toggle>
+
+          <!-- Enlace para "Registro" también con selección exacta -->
+          <ion-menu-toggle auto-hide="false">
+            <ion-item
+              routerDirection="root"
+              [routerLink]="['/informatica/formularios']"
+              lines="none"
+              detail="false"
+              routerLinkActive="selected"
+              [routerLinkActiveOptions]="{ exact: true }">
               <ion-icon aria-hidden="true" slot="start" name="school-outline"></ion-icon>
               <ion-label>Registro</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-
-
 
       </ion-content>
     </ion-menu>
