@@ -1,0 +1,34 @@
+<ion-content>
+  <!-- Formulario de aspirante -->
+  <form [formGroup]="aspiranteForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="Nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido Paterno</ion-label>
+      <ion-input formControlName="ApellidoP"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido Materno</ion-label>
+      <ion-input formControlName="ApellidoM"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input type="email" formControlName="Correo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número de Teléfono</ion-label>
+      <ion-input type="tel" formControlName="NumeroT"></ion-input>
+    </ion-item>
+
+    <!-- Botón de submit -->
+    <ion-button expand="block" type="submit" [disabled]="!aspiranteForm.valid">
+      Guardar
+    </ion-button>
+  </form>
+</ion-content>

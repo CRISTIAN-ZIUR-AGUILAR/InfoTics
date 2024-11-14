@@ -8,7 +8,16 @@ export interface Alumno {
   ApellidoP: string;
   Correo: string;
   Nombre: string;
-  NumeroT: string; // Corrige aquí si debe ser 'NumeroT'
+  NumeroT: string; 
+}
+
+export interface Aspirante {
+  id?: string;
+  ApellidoM: string;
+  ApellidoP: string;
+  Correo: string;
+  Nombre: string;
+  NumeroT: string; 
 }
 
 @Injectable({
@@ -17,23 +26,39 @@ export interface Alumno {
 
 export class FirebaseService {
   private informaticaCollection = collection(this.firestore, 'Informatica');
+  private cienciaDeDatosCollection = collection(this.firestore, 'CIENCIA-DE-DATOS'); // New collection for Aspirantes
 
   constructor(private firestore: Firestore) {}
 
-  // Obtener lista de alumnos
+  // Get list of Alumnos
   getAlumnos(): Observable<Alumno[]> {
     return collectionData(this.informaticaCollection, { idField: 'id' }) as Observable<Alumno[]>;
   }
 
-  // Método para agregar un nuevo alumno a Firebase
-  addAlumno(alumno: Alumno): Promise<any> { // Cambié el tipo de retorno a 'Promise<any>'
+  // Add a new Alumno to Firebase
+  addAlumno(alumno: Alumno): Promise<any> {
     return addDoc(this.informaticaCollection, alumno)
       .then((docRef) => {
-        console.log('Alumno agregado a Firebase con ID:', docRef.id);
+        console.log('Alumno added with ID:', docRef.id);
       })
       .catch((error) => {
-        console.error('Error al agregar alumno:', error);
+        console.error('Error adding Alumno:', error);
+      });
+  }
+
+  // Get list of Aspirantes
+  getAspirantes(): Observable<Aspirante[]> {
+    return collectionData(this.cienciaDeDatosCollection, { idField: 'id' }) as Observable<Aspirante[]>;
+  }
+
+  // Add a new Aspirante to Firebase
+  addAspirante(aspirante: Aspirante): Promise<any> {
+    return addDoc(this.cienciaDeDatosCollection, aspirante)
+      .then((docRef) => {
+        console.log('Aspirante added with ID:', docRef.id);
+      })
+      .catch((error) => {
+        console.error('Error adding Aspirante:', error);
       });
   }
 }
-

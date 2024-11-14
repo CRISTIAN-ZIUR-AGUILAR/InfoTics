@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Aspirantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Aspirantes</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let aspirante of aspirantes">
+            <td>{{ aspirante.Nombre }} {{ aspirante.ApellidoP }} {{ aspirante.ApellidoM }}</td>
+            <td>{{ aspirante.NumeroT }}</td>
+            <td>{{ aspirante.Correo }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+
+  <ng-template #noData>
+    <p>No hay datos disponibles.</p>
+  </ng-template>
+</ion-content>
