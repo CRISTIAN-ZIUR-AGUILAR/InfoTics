@@ -34,6 +34,35 @@
           </ion-menu-toggle>
         </ion-list>
 
+        <!-- Módulo Ingeniería en TICs -->
+        <ion-list id="IngTics">
+          <ion-list-header>Ingeniería en TICs</ion-list-header>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/ing-tics']" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" name="desktop-outline"></ion-icon>
+              <ion-label>Ingeniería en TICs</ion-label>
+            </ion-item>
+            <ion-item routerDirection="root" [routerLink]="['/ing-tics/formularios']" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" name="document-outline"></ion-icon>
+              <ion-label>Registro</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <!-- Módulo Ciencia de Datos -->
+        <ion-list id="CienciaDeDatos">
+          <ion-list-header>Ciencia de Datos</ion-list-header>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" [routerLink]="['/ciencia-de-datos']" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" name="analytics-outline"></ion-icon>
+              <ion-label>Ciencia de Datos</ion-label>
+            </ion-item>
+            <ion-item routerDirection="root" [routerLink]="['/ciencia-de-datos/formularios']" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" name="document-outline"></ion-icon>
+              <ion-label>Registro</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
 
 
       </ion-content>
