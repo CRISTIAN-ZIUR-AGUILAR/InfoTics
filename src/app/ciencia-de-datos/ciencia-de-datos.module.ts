@@ -4,22 +4,24 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { CienciaDeDatosRoutingModule } from './ciencia-de-datos-routing.module'; // Asegúrate de importar el módulo de rutas
+import { CienciaDeDatosRoutingModule } from './ciencia-de-datos-routing.module';
 import { CienciaDeDatosListComponent } from './ciencia-de-datos-list/ciencia-de-datos-list.component';
 import { CienciaDatosFormComponent } from './ciencia-de-datos-form/ciencia-de-datos-form.component'; // Importa el componente de formulario
+import { HomeCienciaDeDatosComponent } from './home-ciencia-de-datos/home-ciencia-de-datos.component'; // Importa HomeCienciaDeDatos
 
 @NgModule({
   declarations: [
     CienciaDeDatosListComponent,
-    CienciaDatosFormComponent // Declara el componente aquí
+    CienciaDatosFormComponent,
+    HomeCienciaDeDatosComponent, // Declara HomeCienciaDeDatos aquí
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    IonicModule, // Asegúrate de importar el IonicModule para tener acceso a los componentes de Ionic como ion-content
-    CienciaDeDatosRoutingModule // Asegúrate de importar el módulo de rutas
+    IonicModule,
+    CienciaDeDatosRoutingModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]  // Si es necesario
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CienciaDeDatosModule {}

@@ -5,6 +5,70 @@
 </ion-header>
 
 <ion-content>
+  <!-- Información adicional sobre la carrera -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ingeniería en Ciencia de Datos</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Objetivo General -->
+      <section id="objetivo">
+        <h2>Objetivo General</h2>
+        <p>
+          Formar ingenieros competentes que modelan, implementan y evalúan datos provenientes de entornos complejos, utilizando técnicas de vanguardia que le permitan la identificación, visualización y comprensión de patrones, que facilitan la toma de decisiones estratégicas en los sectores educativo, empresarial, social e industrial a través de equipos multidisciplinarios con enfoque ético y sostenible.
+        </p>
+      </section>
+
+      <!-- Perfil de Ingreso -->
+      <section id="perfil-ingreso">
+        <h2>Perfil de Ingreso</h2>
+        <ul>
+          <li>Habilidades lógico-matemáticas, de programación, pensamiento crítico, comunicación y curiosidad y disposición para el aprendizaje.</li>
+          <li>Capacidad creativa, analítica, de resolución de problemas y emprendedora.</li>
+          <li>Liderazgo y capacidad de trabajo en equipos multidisciplinarios.</li>
+          <li>Razonamiento cuantitativo y pensamiento analítico.</li>
+          <li>Conciencia ética y social.</li>
+          <li>Compromiso con el desarrollo sostenible.</li>
+          <li>Habilidades de aprendizaje autónomo y capacidad de síntesis.</li>
+          <li>Capacidad para reconocer y valorar el diseño estético y funcional de productos tecnológicos.</li>
+        </ul>
+      </section>
+
+      <!-- Perfil de Egreso -->
+      <section id="perfil-egreso">
+        <h2>Perfil de Egreso</h2>
+        <ul>
+          <li>Domina técnicas de recolección, limpieza y preparación de datos para garantizar la confiabilidad de los usuarios elevando su productividad y competitividad.</li>
+          <li>Implementa estrategias tecnológicas para la administración, almacenamiento y gobernanza de los datos considerando las implicaciones éticas y legales.</li>
+          <li>Diseña y desarrolla arquitecturas de datos escalables, procesos de extracción, transformación y carga (ETL) así como, secuencias de datos para gestionar grandes volúmenes de información con responsabilidad social.</li>
+          <li>Construye modelos de aprendizaje automático y aprendizaje profundo en el desarrollo de soluciones de alta especialidad para entornos complejos, respetando el marco legal internacional con responsabilidad social y respeto a los derechos humanos.</li>
+          <li>Aplica la lógica de los lenguajes de programación para generar código y funciones que permitan la manipulación y análisis de datos con excelencia.</li>
+          <li>Implementa y gestiona sistemas embebidos en dispositivos de internet de las cosas para garantizar la recopilación y transmisión de datos de manera eficiente y confiable.</li>
+          <li>Planifica, ejecuta y gestiona proyectos de ciencia de datos para asegurar soluciones que cumplan con los objetivos y requisitos de la organización con sentido ético.</li>
+        </ul>
+      </section>
+
+      <!-- Información de contacto -->
+      <section id="informacion-adicional">
+        <h2>Información de Contacto</h2>
+        <p>Dirección: Ex-Hda. de Nazareno, Santa Cruz Xoxocotlán, Oaxaca, C.P. 71230</p>
+        <p>Email: <a href="mailto:cyd_voaxaca@tecnm.mx">cyd_voaxacatecnm.mx</a></p>
+        <p>Conmutador: 951 517 04 44</p>
+
+        <h3>Sitios de Interés</h3>
+        <ul>
+          <li><a href="https://www.conacyt.gob.mx/">Página de CONACYT</a></li>
+          <li><a href="https://www.conricyt.mx/">Página de CONRICYT</a></li>
+          <li><a href="https://www.ifai.org.mx/">Página IFAI</a></li>
+          <li><a href="https://www.inai.org.mx/">Página de Consulta Pública INAI</a></li>
+          <li><a href="https://www.gob.mx/sep">Página de la SEP</a></li>
+        </ul>
+      </section>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Tabla de aspirantes -->
   <ion-card>
     <ion-card-header>
       <ion-card-title>Aspirantes</ion-card-title>
@@ -13,18 +77,18 @@
     <ion-card-content>
       <table class="table table-striped">
         <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Teléfono</th>
-            <th>Correo</th>
-          </tr>
+        <tr>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Correo</th>
+        </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let aspirante of aspirantes">
-            <td>{{ aspirante.Nombre }} {{ aspirante.ApellidoP }} {{ aspirante.ApellidoM }}</td>
-            <td>{{ aspirante.NumeroT }}</td>
-            <td>{{ aspirante.Correo }}</td>
-          </tr>
+        <tr *ngFor="let aspirante of aspirantes">
+          <td>{{ aspirante.Nombre }} {{ aspirante.ApellidoP }} {{ aspirante.ApellidoM }}</td>
+          <td>{{ aspirante.NumeroT }}</td>
+          <td>{{ aspirante.Correo }}</td>
+        </tr>
         </tbody>
       </table>
     </ion-card-content>

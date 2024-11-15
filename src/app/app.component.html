@@ -53,16 +53,29 @@
         <ion-list id="CienciaDeDatos">
           <ion-list-header>Ciencia de Datos</ion-list-header>
           <ion-menu-toggle auto-hide="false">
-            <ion-item routerDirection="root" [routerLink]="['/ciencia-de-datos']" lines="none" detail="false" routerLinkActive="selected">
+            <!-- Enlace al inicio del módulo Ciencia de Datos -->
+            <ion-item
+              routerDirection="root"
+              [routerLink]="['/ciencia-de-datos/home-ciencia-de-datos']"
+              lines="none"
+              detail="false"
+              routerLinkActive="selected">
               <ion-icon aria-hidden="true" slot="start" name="analytics-outline"></ion-icon>
-              <ion-label>Ciencia de Datos</ion-label>
+              <ion-label>Inicio</ion-label>
             </ion-item>
-            <ion-item routerDirection="root" [routerLink]="['/ciencia-de-datos/formularios']" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon aria-hidden="true" slot="start" name="document-outline"></ion-icon>
-              <ion-label>Registro</ion-label>
+            <!-- Enlace a la lista de datos -->
+            <ion-item
+              routerDirection="root"
+              [routerLink]="['/ciencia-de-datos/list']"
+              lines="none"
+              detail="false"
+              routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" name="list-outline"></ion-icon>
+              <ion-label>Lista de aspirantes</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+
 
       </ion-content>
     </ion-menu>
