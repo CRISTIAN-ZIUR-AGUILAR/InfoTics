@@ -1,0 +1,39 @@
+/* Estilos para el footer */
+.footer {
+  background-color: -moz-default-background-color; /* Fondo negro*/
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.social-icons-container {
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #0066cc; /* Usando el mismo color verde que en el diseño anterior */
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ffffff; /* Color de texto oscuro para los párrafos */
+}
+
+.footer-info a {
+  color: #0066cc; /* Usando el mismo color verde para los enlaces */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.tecnm-logo {
+  width: 120px;
+  margin-top: 10px;
+}

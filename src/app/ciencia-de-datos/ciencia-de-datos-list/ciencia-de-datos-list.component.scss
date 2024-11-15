@@ -1,0 +1,143 @@
+/* Estilo general para el contenido */
+ion-content {
+  padding: 0 15px;
+  background-color: #f8f9fa; /* Fondo claro para el contenido */
+}
+
+ion-card {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para los bordes */
+}
+
+ion-card-header {
+  background-color: #007bff; /* Color de fondo para el encabezado de la tarjeta */
+  color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0 0; /* Bordes redondeados para la parte superior */
+}
+
+ion-card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Línea separadora entre filas */
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+td {
+  background-color: #fff;
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Color de fondo al pasar el mouse por encima de las filas */
+}
+
+/* Estilos para el footer */
+.footer {
+  background-color: -moz-default-background-color; /* Fondo claro */
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.social-icons-container {
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #0066cc; /* Color azul */
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-info a {
+  color: #426B1F; /* Color verde */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.tecnm-logo {
+  width: 120px;
+  margin-top: 10px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .social-icon {
+    font-size: 24px;
+    margin: 0 8px;
+  }
+
+  .tecnm-logo {
+    width: 100px;
+  }
+
+  .footer-info p {
+    font-size: 12px;
+  }
+}
+
+
+/* Ajuste para el footer en modo oscuro */
+ion-content.dark-mode .footer {
+  background-color: #333;
+}
+
+ion-content.dark-mode .social-icon {
+  color: #007bff; /* Cambia el color de los íconos en modo oscuro */
+}
+
+ion-content.dark-mode .social-icon:hover {
+  color: #ffffff; /* Cambia el color al pasar el mouse en modo oscuro */
+}
+
+ion-content.dark-mode {
+  background-color: #333; /* Fondo oscuro para el contenido */
+  color: white; /* Texto blanco en modo oscuro */
+}
+
+ion-content.dark-mode ion-card {
+  background-color: #444; /* Fondo más oscuro para las tarjetas */
+}
+
+ion-content.dark-mode table {
+  background-color: #444; /* Fondo oscuro para la tabla */
+}
+
+ion-content.dark-mode th {
+  background-color: #555; /* Fondo más oscuro para los encabezados de la tabla */
+}
+
+ion-content.dark-mode td {
+  background-color: #444; /* Fondo oscuro para las celdas */
+}

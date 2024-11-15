@@ -1,4 +1,3 @@
-
 <ion-content>
   <!-- Formulario de aspirante -->
   <form [formGroup]="aspiranteForm" (ngSubmit)="onSubmit()">
@@ -32,4 +31,21 @@
       Guardar
     </ion-button>
   </form>
+
+  <!-- Footer con íconos de redes sociales y más información -->
+  <footer class="footer text-center mt-4">
+    <div class="social-icons-container">
+      <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+      <ion-icon name="logo-github" class="social-icon"></ion-icon>
+    </div>
+
+    <!-- Información adicional en el footer -->
+    <div class="footer-info">
+      <p>&copy; 2024 Instituto Tecnológico del Valle de Oaxaca. Todos los derechos reservados.</p>
+      <p><a href="/terminos-y-condiciones" class="text-primary">Términos y Condiciones</a> | <a href="/privacidad" class="text-primary">Política de Privacidad</a></p>
+    </div>
+
+    <!-- Logo TecNM -->
+    <img src="https://raw.githubusercontent.com/Pulgarcit0/img/refs/heads/main/itvo/Itvo.png" alt="TecNM Logo" class="tecnm-logo">
+  </footer>
 </ion-content>
