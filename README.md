@@ -1,4 +1,4 @@
-1. Clona el repositorio
+-c1. Clona el repositorio
 Si ya has clonado el repositorio, asegúrate de que esté completo y correctamente descargado. Si no, usa este comando:
 git clone https://github.com/CRISTIAN-ZIUR-AGUILAR/InfoTics.git
 
