@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Alumnos Tics</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Alumnos en Tics</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Correo</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let alumno of alumnos">
+          <td>{{ alumno.Nombre }} {{ alumno.ApellidoP }} {{ alumno.ApellidoM }}</td>
+          <td>{{ alumno.NumeroT }}</td>
+          <td>{{ alumno.Correo }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -19,7 +19,9 @@ const routes: Routes = [
   {
     path: 'ciencia-de-datos',
     loadChildren: () => import('./ciencia-de-datos/ciencia-de-datos.module').then(m => m.CienciaDeDatosModule)
-  }
+  },
+  { path: 'informatica', loadChildren: () => import('./informatica/informatica.module').then(m => m.InformaticaModule) },
+  { path: 'tics', loadChildren: () => import('./tics/tics.module').then(m => m.TicsModule) } // Ruta de Tics
 ];
 
 @NgModule({
