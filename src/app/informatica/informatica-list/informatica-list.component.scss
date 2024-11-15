@@ -1,1 +1,124 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
 
+/* Color de fondo para el header */
+.header-toolbar {
+  padding: 0px 0;
+}
+.container-h{
+  background-color: #003366;
+  padding: 15px 0;
+
+}
+
+.header-title {
+  color: #eeeeee;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/* Fondo general y organización del contenido */
+.informatica-list-content {
+  background-color: #55a8f1; /* Azul claro */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Superposición con imagen centrada */
+.background-overlay {
+  background-image: url('https://raw.githubusercontent.com/CRISTIAN-ZIUR-AGUILAR/InfoTics/refs/heads/main/src/img/logo.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Secciones transparentes */
+.section-transparent {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilos de la tabla */
+.table {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: center;
+}
+
+.table-bordered {
+  border: 1px solid #ccc;
+}
+
+.table-primary {
+  background-color: #0066cc; /* Azul atractivo */
+  color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e2e6ea;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #0066cc;
+  margin: 0 10px;
+}
+
+.tecnm-logo {
+  width: 50px;
+  margin-left: 10px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .informatica-list-content {
+    padding: 15px;
+  }
+
+  .background-overlay {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .table {
+    font-size: 0.9em;
+  }
+
+  .section-transparent {
+    padding: 15px;
+  }
+}

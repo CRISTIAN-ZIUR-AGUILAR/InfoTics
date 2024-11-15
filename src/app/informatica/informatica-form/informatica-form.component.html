@@ -1,27 +1,49 @@
+<ion-header>
+  <ion-toolbar class="header-toolbar">
+    <div class="container-h text-center">
+      <ion-title class="header-title">Registro de Alumnos</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
 
+<ion-content fullscreen class="home-form-content">
+  <!-- Contenedor del Formulario -->
+  <div class="container form-container py-4">
+    <form [formGroup]="alumnoForm" (ngSubmit)="onSubmit()">
+      <div class="card p-4 shadow section-transparent">
+        <h2 class="text-center text-primary mb-4">Llena tus datos</h2>
+        <!-- Campos del formulario -->
+        <ion-item class="form-item">
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="Nombre"></ion-input>
+        </ion-item>
+        <ion-item class="form-item">
+          <ion-label position="floating">Apellido Paterno</ion-label>
+          <ion-input formControlName="ApellidoP"></ion-input>
+        </ion-item>
+        <ion-item class="form-item">
+          <ion-label position="floating">Apellido Materno</ion-label>
+          <ion-input formControlName="ApellidoM"></ion-input>
+        </ion-item>
+        <ion-item class="form-item">
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input type="email" formControlName="Correo"></ion-input>
+        </ion-item>
+        <ion-item class="form-item">
+          <ion-label position="floating">Número de Teléfono</ion-label>
+          <ion-input type="tel" formControlName="NumeroT"></ion-input>
+        </ion-item>
 
-<ion-content>
-  <form [formGroup]="alumnoForm" (ngSubmit)="onSubmit()">
-    <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input formControlName="Nombre"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Apellido Paterno</ion-label>
-      <ion-input formControlName="ApellidoP"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Apellido Materno</ion-label>
-      <ion-input formControlName="ApellidoM"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Correo</ion-label>
-      <ion-input type="email" formControlName="Correo"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Número de Teléfono</ion-label>
-      <ion-input type="tel" formControlName="NumeroT"></ion-input> <!-- Cambiado a 'NumeroT' -->
-    </ion-item>
-    <ion-button expand="block" type="submit" [disabled]="!alumnoForm.valid">Guardar</ion-button>
-  </form>
+        <!-- Botón de envío -->
+        <ion-button expand="block" type="submit" [disabled]="!alumnoForm.valid" class="submit-button">
+          Guardar
+        </ion-button>
+      </div>
+    </form>
+    <footer class="footer text-center mt-4">
+      <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+      <ion-icon name="logo-github" class="social-icon"></ion-icon>
+      <img src="https://raw.githubusercontent.com/CRISTIAN-ZIUR-AGUILAR/InfoTics/refs/heads/main/src/img/logo.png" alt="TecNM Logo" class="tecnm-logo">
+    </footer>
+  </div>
 </ion-content>

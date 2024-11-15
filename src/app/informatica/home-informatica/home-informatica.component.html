@@ -1,6 +1,8 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Ingeniería en Informática</ion-title>
+  <ion-toolbar class="header-toolbar">
+    <div class="container-h text-center">
+      <ion-title class="header-title">INGENIERIA INFORMATICA</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -46,9 +48,17 @@
       </ul>
     </div>
 
-    <!-- Botón final -->
-    <div class="text-center">
-      <button class="btn btn-primary btn-lg mt-4" (click)="onInteresadoClick()">¿Te interesa?</button>
+    <!-- Botón -->
+    <div class="btn-container">
+      <button class="btn btn-primary btn-lg" (click)="onInteresadoClick()">¿Te interesa?</button>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer class="footer text-center mt-4">
+    <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+    <ion-icon name="logo-github" class="social-icon"></ion-icon>
+    <img src="https://raw.githubusercontent.com/CRISTIAN-ZIUR-AGUILAR/InfoTics/refs/heads/main/src/img/logo.png" alt="TecNM Logo" class="tecnm-logo">
+  </footer>
+
 </ion-content>

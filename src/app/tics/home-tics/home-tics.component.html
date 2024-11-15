@@ -1,15 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Tecnologías de la Información</ion-title>
+  <ion-toolbar class="header-toolbar">
+    <div class="container-tics text-center">
+      <ion-title class="header-title">Tecnologías de la Información</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen class="home-tics-content container">
+<ion-content fullscreen class="home-tics-content">
+  <div class="container py-4 background-overlay">
 
-  <!-- Sección: Objetivo de la Carrera -->
-  <div class="card mb-4">
-    <div class="card-body">
-      <h2 class="card-title">Objetivo de la Carrera</h2>
+    <!-- Sección: Objetivo de la Carrera -->
+    <div class="card mb-4 p-3 shadow section-transparent">
+      <h2 class="text-center text-primary">Objetivo de la Carrera</h2>
       <p class="card-text">
         Formar profesionistas capaces de desarrollar, integrar y administrar tecnologías de la información y comunicaciones
         que contribuyan a la productividad y al logro de los objetivos estratégicos de las organizaciones en un entorno
@@ -17,12 +19,10 @@
         comprometidos con el desarrollo sustentable.
       </p>
     </div>
-  </div>
 
-  <!-- Sección: Visión -->
-  <div class="card mb-4">
-    <div class="card-body">
-      <h2 class="card-title">Visión</h2>
+    <!-- Sección: Visión -->
+    <div class="card mb-4 p-3 shadow section-transparent">
+      <h2 class="text-center text-primary">Visión</h2>
       <p class="card-text">
         Ser el mejor programa académico en Tecnologías de la Información y Comunicaciones, con reconocimiento a nivel estatal
         y nacional, permitiendo que los egresados tengan un alto impacto en el mercado laboral, ofreciendo soluciones
@@ -30,12 +30,10 @@
         científica y de desarrollo tecnológico.
       </p>
     </div>
-  </div>
 
-  <!-- Sección: Misión -->
-  <div class="card mb-4">
-    <div class="card-body">
-      <h2 class="card-title">Misión</h2>
+    <!-- Sección: Misión -->
+    <div class="card mb-4 p-3 shadow section-transparent">
+      <h2 class="text-center text-primary">Misión</h2>
       <p class="card-text">
         Formar profesionales en el área de Tecnologías de la Información y Comunicaciones bajo un modelo educativo
         vanguardista, con los conocimientos, habilidades científicas y tecnológicas, con una orientación humanista, con
@@ -43,12 +41,10 @@
         las necesidades del entorno.
       </p>
     </div>
-  </div>
 
-  <!-- Sección: Perfil de Egreso -->
-  <div class="card mb-4">
-    <div class="card-body">
-      <h2 class="card-title">Perfil de Egreso</h2>
+    <!-- Sección: Perfil de Egreso -->
+    <div class="card mb-4 p-3 shadow section-transparent">
+      <h2 class="text-center text-primary">Perfil de Egreso</h2>
       <ul class="list-unstyled">
         <li>• Diseña, implementa y administra redes de cómputo y comunicaciones.</li>
         <li>• Administra proyectos que involucren TIC.</li>
@@ -64,11 +60,23 @@
         <li>• Usa tecnologías emergentes para responder a las necesidades del entorno.</li>
       </ul>
     </div>
+
+    <!-- Botón final -->
+    <div class="btn-container">
+      <ion-button expand="block" color="primary" (click)="onInteresadoClick()" class="interesado-button">
+        ¿Te interesa?
+      </ion-button>
+    </div>
   </div>
 
-  <!-- Botón final -->
-  <ion-button expand="block" color="primary" (click)="onInteresadoClick()" class="interesado-button">
-    ¿Te interesa?
-  </ion-button>
-
+  <!-- Footer con iconos -->
+  <footer class="footer text-center mt-4">
+    <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+    <ion-icon name="logo-github" class="social-icon"></ion-icon>
+    <img src="https://raw.githubusercontent.com/CRISTIAN-ZIUR-AGUILAR/InfoTics/refs/heads/main/src/img/logo.png" alt="TecNM Logo" class="tecnm-logo">
+  </footer>
+  <footer class="footer text-center mt-4">
+    <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+    <ion-icon name="logo-github" class="social-icon"></ion-icon>
+  </footer>
 </ion-content>

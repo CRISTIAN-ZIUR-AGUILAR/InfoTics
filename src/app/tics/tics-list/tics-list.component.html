@@ -1,32 +1,41 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Lista de Alumnos Tics</ion-title>
+  <ion-toolbar class="header-toolbar">
+    <div class="container-tics text-center">
+      <ion-title class="header-title">Lista de Alumnos TICS</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Alumnos en Tics</ion-card-title>
-    </ion-card-header>
+<ion-content fullscreen class="home-tics-list">
+  <div class="container py-4 background-overlay">
+    <div class="card mb-4 p-3 shadow section-transparent">
+      <h2 class="text-center text-primary">Alumnos en TICS</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let alumno of ticsAlumnos">
+            <td>{{ alumno.Nombre }} {{ alumno.ApellidoP }} {{ alumno.ApellidoM }}</td>
+            <td>{{ alumno.NumeroT }}</td>
+            <td>{{ alumno.Correo }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
-    <ion-card-content>
-      <table style="width: 100%; border-collapse: collapse;">
-        <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Teléfono</th>
-          <th>Correo</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let alumno of ticsAlumnos">
-          <td>{{ alumno.Nombre }} {{ alumno.ApellidoP }} {{ alumno.ApellidoM }}</td>
-          <td>{{ alumno.NumeroT }}</td>
-          <td>{{ alumno.Correo }}</td>
-        </tr>
-        </tbody>
-      </table>
-    </ion-card-content>
-  </ion-card>
+  <!-- Footer -->
+  <footer class="footer text-center mt-4">
+    <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+    <ion-icon name="logo-github" class="social-icon"></ion-icon>
+    <img src="https://raw.githubusercontent.com/CRISTIAN-ZIUR-AGUILAR/InfoTics/refs/heads/main/src/img/logo.png" alt="TecNM Logo" class="tecnm-logo">
+  </footer>
+
 </ion-content>

@@ -1,21 +1,58 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="header-toolbar">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title class="header-title">Tecnológico Nacional de México</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="home-content">
+  <!-- Imagen principal -->
+  <div class="image-container">
+    <img src="https://scontent.foax2-1.fna.fbcdn.net/v/t39.30808-6/459893265_945291274304315_4086447462894521737_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=mqSvoF7-deoQ7kNvgFCnY1d&_nc_zt=23&_nc_ht=scontent.foax2-1.fna&_nc_gid=A8CvpnXOQusX-OWo-hBgbxf&oh=00_AYAemFANgKj_SVAJGtOk-zJ4q8SlulQ-kC5tpezoeWvDXw&oe=673CDB5D" alt="Imagen del TECNM" class="main-image">
+  </div>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- Detalles del TECNM -->
+  <div class="container py-4">
+    <div class="card p-4 shadow section-transparent">
+      <h2 class="text-center text-primary">Detalles</h2>
+      <p class="card-text">
+        Brindamos educación superior en Oaxaca, con las carreras de Ing. en Agronomía, Lic. Biología, Ing. Forestal, Ing. Informática e Ing. en TIC´s.
+      </p>
+    </div>
+
+    <!-- Información en lista con íconos -->
+    <ul class="list-group">
+      <li class="list-group-item">
+        <ion-icon name="school-outline" slot="start"></ion-icon> <strong>Página</strong>: Universidad
+      </li>
+      <li class="list-group-item">
+        <ion-icon name="location-outline" slot="start"></ion-icon> Ex Hacienda de Nazareno, s/n., Santa Cruz Xoxocotlán, México
+      </li>
+      <li class="list-group-item">
+        <ion-icon name="call-outline" slot="start"></ion-icon> 951 517 0444
+      </li>
+      <li class="list-group-item">
+        <ion-icon name="mail-outline" slot="start"></ion-icon> cyd_voaxaca&#64;tecnm.mx
+      </li>
+      <li class="list-group-item">
+        <ion-icon name="globe-outline" slot="start"></ion-icon> <a href="https://voaxaca.tecnm.mx" target="_blank">voaxaca.tecnm.mx</a>
+      </li>
+      <li class="list-group-item">
+        <ion-icon name="time-outline" slot="start"></ion-icon> Cerrado ahora
+      </li>
+      <li class="list-group-item">
+        <ion-icon name="pricetag-outline" slot="start"></ion-icon> Rango de precios · $$
+      </li>
+      <li class="list-group-item">
+        <ion-icon name="thumbs-up-outline" slot="start"></ion-icon> Recomendado por el 88% (90 opiniones)
+      </li>
+    </ul>
+
+    <!-- Incrustar página web -->
+    <div class="iframe-container mt-4">
+      <iframe src="https://www.voaxaca.tecnm.mx/" frameborder="0" class="embedded-page"></iframe>
+    </div>
   </div>
 </ion-content>

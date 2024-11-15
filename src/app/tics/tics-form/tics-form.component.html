@@ -1,31 +1,60 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Registro en Tics</ion-title>
+  <ion-toolbar class="header-toolbar">
+    <div class="container-h text-center">
+      <ion-title class="header-title">Registro en Tics</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <form [formGroup]="ticsForm" (ngSubmit)="onSubmit()">
-    <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input formControlName="Nombre"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Apellido Paterno</ion-label>
-      <ion-input formControlName="ApellidoP"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Apellido Materno</ion-label>
-      <ion-input formControlName="ApellidoM"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Correo</ion-label>
-      <ion-input type="email" formControlName="Correo"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Número de Teléfono</ion-label>
-      <ion-input type="tel" formControlName="NumeroT"></ion-input>
-    </ion-item>
-    <ion-button expand="block" type="submit" [disabled]="!ticsForm.valid">Guardar</ion-button>
-  </form>
+<ion-content fullscreen class="home-form-content">
+  <!-- Contenedor del Formulario -->
+  <div class="container form-container py-4 background-overlay">
+    <form [formGroup]="ticsForm" (ngSubmit)="onSubmit()">
+      <div class="card p-4 shadow section-transparent">
+        <h2 class="text-center text-primary mb-4">Llena tus datos</h2>
+
+        <!-- Campos del formulario -->
+        <ion-item class="form-item">
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="Nombre"></ion-input>
+        </ion-item>
+        <ion-item class="form-item">
+          <ion-label position="floating">Apellido Paterno</ion-label>
+          <ion-input formControlName="ApellidoP"></ion-input>
+        </ion-item>
+        <ion-item class="form-item">
+          <ion-label position="floating">Apellido Materno</ion-label>
+          <ion-input formControlName="ApellidoM"></ion-input>
+        </ion-item>
+        <ion-item class="form-item">
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input type="email" formControlName="Correo"></ion-input>
+        </ion-item>
+        <ion-item class="form-item">
+          <ion-label position="floating">Número de Teléfono</ion-label>
+          <ion-input type="tel" formControlName="NumeroT"></ion-input>
+        </ion-item>
+
+        <!-- Botón de envío -->
+        <ion-button expand="block" type="submit" [disabled]="!ticsForm.valid" class="submit-button">
+          Guardar
+        </ion-button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <a href="https://www.facebook.com/tecnmvalles" target="_blank" class="social-icon">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    <a href="https://github.com/CRISTIAN-ZIUR-AGUILAR" target="_blank" class="social-icon">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+
+    <img src="https://raw.githubusercontent.com/CRISTIAN-ZIUR-AGUILAR/InfoTics/refs/heads/main/src/img/logo.png"
+      alt="Logo TecNM"
+      class="tecnm-logo"
+    />
+  </div>
 </ion-content>

@@ -1,59 +1,147 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+.header-toolbar {
+  padding: 0px 0;
+}
+.container-h{
+  background-color: #003366;
+  padding: 15px 0;
 
-/* Fondo con imagen y color de superposición */
+}
+
+.header-title {
+  color: #eeeeee;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+/* Fondo general */
 .home-informatica-content {
-  background-image: url('https://raw.githubusercontent.com/Pulgarcit0/SysPasteleria/refs/heads/main/assets/img/background.jpg?token=GHSAT0AAAAAAC2FD53NKSAFL6LVT4BP3B3AZZW3CMA'); /* Cambia por la ruta de tu imagen */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-color: #f0f8ff; /* Azul claro */
   display: flex;
   justify-content: center;
   padding: 20px;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Superposición con imagen centrada */
 .background-overlay {
-  background-image: url('https://raw.githubusercontent.com/Pulgarcit0/SysPasteleria/refs/heads/main/assets/img/background.jpg?token=GHSAT0AAAAAAC2FD53NKSAFL6LVT4BP3B3AZZW3CMA'); /* Cambia por la ruta de tu imagen */
+  background-image: url('https://raw.githubusercontent.com/CRISTIAN-ZIUR-AGUILAR/InfoTics/refs/heads/main/src/img/logo.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 800px;
+  width: 100%;
   padding: 20px;
   border-radius: 8px;
 }
 
 /* Secciones transparentes */
 .section-transparent {
-  background-color: rgba(255, 255, 255, 0); /* Fondo blanco con transparencia */
+  background-color: rgba(255, 255, 255, 0.87);
   border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01); /* Sombra suave */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 /* Estilos de texto y títulos */
 .text-primary {
-  color: #003366; /* Azul oscuro */
+  color: #003366;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
 .card-text, ul {
-  font-size: 1.1em;
-  line-height: 1.6;
+  font-size: 1em;
+  line-height: 1.5;
   color: #333;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 /* Estilos para el botón */
+.btn-container {
+  margin-top: 30px;
+  margin-bottom: 20px; /* Despega el botón de abajo */
+}
+
 .btn-primary {
-  background-color: #0066cc; /* Azul atractivo */
+  background-color: #0066cc;
   color: #fff;
   border: none;
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
 }
 
 .btn-primary:hover {
   background-color: #004c99;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #0066cc;
+  margin: 0 10px;
+}
+
+.tecnm-logo {
+  width: 50px;
+  margin-left: 10px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .home-informatica-content {
+    padding: 15px;
+  }
+
+  .background-overlay {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .card-text, ul {
+    font-size: 0.9em;
+  }
+
+  .section-transparent {
+    padding: 15px;
+  }
+
+  .btn-primary {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+  }
 }

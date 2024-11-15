@@ -1,18 +1,20 @@
 <ion-header>
-  <ion-toolbar color="">
-    <ion-title>Lista de Alumnos</ion-title>
+  <ion-toolbar class="header-toolbar">
+    <div class="container-h text-center">
+      <ion-title class="header-title">Lista de Alumnos</ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Alumnos</ion-card-title>
-    </ion-card-header>
+<ion-content fullscreen class="informatica-list-content">
+  <div class="container py-4 background-overlay">
+    <!-- Título de la Lista -->
+    <div class="card p-3 shadow section-transparent">
+      <h2 class="text-center text-primary">Alumnos Registrados</h2>
 
-    <ion-card-content>
-      <table class="table table-striped">
-        <thead>
+      <!-- Tabla de Alumnos -->
+      <table class="table table-striped table-hover table-bordered">
+        <thead class="table-primary">
         <tr>
           <th>Nombre</th>
           <th>Teléfono</th>
@@ -22,15 +24,18 @@
         <tbody>
         <tr *ngFor="let alumno of alumnos">
           <td>{{ alumno.Nombre }} {{ alumno.ApellidoP }} {{ alumno.ApellidoM }}</td>
-          <td>{{ alumno.NumeroT }}</td> <!-- Cambiado a NumeroT -->
+          <td>{{ alumno.NumeroT }}</td>
           <td>{{ alumno.Correo }}</td>
         </tr>
         </tbody>
       </table>
-    </ion-card-content>
-  </ion-card>
+    </div>
+  </div>
 
-  <ng-template #noData>
-    <p>No hay datos disponibles.</p>
-  </ng-template>
+  <!-- Footer con íconos de redes sociales -->
+  <footer class="footer text-center mt-4">
+    <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+    <ion-icon name="logo-github" class="social-icon"></ion-icon>
+    <img src="https://raw.githubusercontent.com/CRISTIAN-ZIUR-AGUILAR/InfoTics/refs/heads/main/src/img/logo.png" alt="TecNM Logo" class="tecnm-logo">
+  </footer>
 </ion-content>

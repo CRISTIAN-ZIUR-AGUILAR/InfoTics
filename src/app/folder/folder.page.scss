@@ -1,28 +1,103 @@
-ion-menu-button {
-  color: var(--ion-color-primary);
+/* General Styles */
+body {
+  font-family: Arial, sans-serif; /* Set a default font family */
+  margin: 0; /* Remove default margin from body */
 }
 
-#container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+/* Header Styles */
+ion-header {
+  --background: transparent; /* Transparent header for translucency */
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.header-toolbar {
+  --background: #007bff; /* Blue header background */
+  --color: white; /* White text color */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
+.header-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* White title text */
 }
 
-#container a {
-  text-decoration: none;
+/* Content Styles */
+ion-content {
+  --background: #f5f5f5; /* Light gray background */
+}
+
+.home-content {
+  padding: 20px; /* Add some padding for content area */
+}
+
+/* Image Styles */
+.image-container {
+  text-align: center; /* Center the image horizontally */
+  margin-bottom: 20px; /* Add some space between image and content */
+}
+
+.main-image {
+  max-width: 800px;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Details Section Styles */
+.container {
+  max-width: 700px; /* Limit container width for better responsiveness */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.card {
+  border: none; /* Remove default card border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.card-text {
+  color: #333; /* Darker text color for details */
+}
+
+/* List Group Styles */
+.list-group-item {
+  border-color: #ddd; /* Light border between list items */
+  padding: 10px 15px; /* Adjust padding for better spacing */
+  font-weight: bold;
+}
+
+.list-group-item strong {
+  color: #007bff; /* Blue color for highlighted text */
+}
+
+.list-group-item a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.list-group-item a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+/* Icon Styles */
+ion-icon {
+  color: #333; /* Darker icon color */
+  margin-right: 10px; /* Add some space between icon and text */
+}
+
+/* Iframe Styles */
+.iframe-container {
+  overflow: hidden; /* Hide potential scrollbars */
+}
+
+.embedded-page {
+  width: 100%; /* Set iframe width to 100% of container */
+  height: 400px; /* Set iframe height (adjust as needed) */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container, .main-image {
+    width: 100%; /* Make container and image full width on smaller screens */
+  }
+
+  .card-text, .list-group-item {
+    font-size: 14px; /* Adjust font sizes for smaller screens */
+  }
 }

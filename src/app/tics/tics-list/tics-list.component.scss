@@ -1,0 +1,101 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Fondo general */
+.home-tics-list {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.container-tics{
+  background-color: #003366; /* Azul TecNM */
+  padding: 10px 0;
+}
+
+.header-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/* Fondo de la tabla */
+.background-overlay {
+  background-image: url('https://raw.githubusercontent.com/CRISTIAN-ZIUR-AGUILAR/InfoTics/refs/heads/main/src/img/logo.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Tabla */
+.table {
+  font-size: 1em;
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+  background-color: #003366; /* Azul oscuro */
+  color: white;
+}
+
+.table-bordered td, .table-bordered th {
+  border: 1px solid #ddd; /* Bordes suaves */
+}
+
+.table tbody tr:hover {
+  background-color: #e3f2fd; /* Resaltado al pasar el cursor */
+}
+
+.table-responsive {
+  overflow-x: auto; /* Soporte para pantallas pequeñas */
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #0066cc;
+  margin: 0 10px;
+}
+
+.tecnm-logo {
+  width: 50px;
+  margin-left: 10px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .home-tics-list {
+    padding: 15px;
+  }
+
+  .background-overlay {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .table {
+    font-size: 0.9em;
+  }
+
+  .header-title {
+    font-size: 1.2em;
+  }
+}
