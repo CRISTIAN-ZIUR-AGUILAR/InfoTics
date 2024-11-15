@@ -1,0 +1,153 @@
+/* Estilos para el header */
+.header-toolbar {
+  padding: 0px 0;
+}
+
+.container-h {
+  background-color: #003366 !important; /* Azul marino */
+  padding: 15px 0;
+  text-align: center; /* Centrar contenido */
+}
+
+.header-title {
+  color: #ffffff !important; /* Letras blancas */
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/* Fondo general para el contenido */
+.home-informatica-content {
+  background-color: #f0f8ff; /* Azul claro */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Asegura que el contenido dentro esté centrado */
+}
+
+/* Superposición con imagen centrada */
+.background-overlay {
+  background-image: url('https://raw.githubusercontent.com/CRISTIAN-ZIUR-AGUILAR/InfoTics/refs/heads/main/src/img/logo.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Espacio entre la imagen y el contenido siguiente */
+}
+
+/* Secciones transparentes */
+.section-transparent {
+  background-color: rgba(255, 255, 255, 0.87);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilos de texto y títulos */
+.text-primary {
+  color: #003366;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.card-text, ul {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #333;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Estilos para el botón */
+.btn-container {
+  margin-top: 30px;
+  margin-bottom: 20px; /* Despega el botón de abajo */
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  display: inline-block; /* Cambio a inline-block para mayor control */
+  margin: 0 auto;
+  padding: 12px 24px;
+  font-size: 1.1em; /* Ajuste en el tamaño del texto */
+  border-radius: 8px; /* Bordes redondeados para el botón */
+}
+
+.btn-primary:hover {
+  background-color: #004c99;
+  cursor: pointer; /* Añadido para indicar que el botón es clickeable */
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #0066cc;
+  margin: 0 10px;
+}
+
+.tecnm-logo {
+  width: 50px;
+  margin-left: 10px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .home-informatica-content {
+    padding: 15px;
+  }
+
+  .background-overlay {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .card-text, ul {
+    font-size: 0.9em;
+  }
+
+  .section-transparent {
+    padding: 15px;
+  }
+
+  .btn-primary {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+  }
+}
