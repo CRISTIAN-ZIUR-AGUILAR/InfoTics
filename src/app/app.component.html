@@ -7,14 +7,13 @@
           <ion-note>951 517 0444</ion-note>
 
         </ion-list>
+        <!-- Módulo Ingeniería en Info -->
         <ion-list id="Informatica">
           <ion-list-header>Informática</ion-list-header>
-
-          <!-- Enlace para "Informática" con opción de selección exacta -->
           <ion-menu-toggle auto-hide="false">
             <ion-item
               routerDirection="root"
-              [routerLink]="['/informatica']"
+              [routerLink]="['/informatica/home-informatica']"
               lines="none"
               detail="false"
               routerLinkActive="selected"
@@ -22,27 +21,33 @@
               <ion-icon aria-hidden="true" slot="start" name="school-outline"></ion-icon>
               <ion-label>Informática</ion-label>
             </ion-item>
-            <ion-item routerDirection="root" [routerLink]="['/informatica/home-informatica']" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item routerDirection="root" [routerLink]="['/informatica/LIST']" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" name="school-outline"></ion-icon>
+              <ion-label>Registros</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+        <!-- Módulo Ingeniería en TICs -->
+        <ion-list id="tics">
+          <ion-list-header>TICS</ion-list-header>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item
+              routerDirection="root"
+              [routerLink]="['/tics']"
+              lines="none"
+              detail="false"
+              routerLinkActive="selected"
+              [routerLinkActiveOptions]="{ exact: true }">
+              <ion-icon aria-hidden="true" slot="start" name="school-outline"></ion-icon>
+              <ion-label>TICS</ion-label>
+            </ion-item>
+            <ion-item routerDirection="root" [routerLink]="['/tics/listas']" lines="none" detail="false" routerLinkActive="selected">
               <ion-icon aria-hidden="true" slot="start" name="school-outline"></ion-icon>
               <ion-label>Registro</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
 
-        <!-- Módulo Ingeniería en TICs -->
-        <ion-list id="IngTics">
-          <ion-list-header>Ingeniería en TICs</ion-list-header>
-          <ion-menu-toggle auto-hide="false">
-            <ion-item routerDirection="root" [routerLink]="['/tics']" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon aria-hidden="true" slot="start" name="desktop-outline"></ion-icon>
-              <ion-label>Ingeniería en TICs</ion-label>
-            </ion-item>
-            <ion-item routerDirection="root" [routerLink]="['/tics/formularios']" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon aria-hidden="true" slot="start" name="document-outline"></ion-icon>
-              <ion-label>Registro</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
 
         <!-- Módulo Ciencia de Datos -->
         <ion-list id="CienciaDeDatos">
@@ -58,7 +63,6 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-
 
       </ion-content>
     </ion-menu>

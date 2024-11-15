@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FirebaseService, TicsAlumno} from "../../services/firebase.service";
+import { FirebaseService, TicsAlumno } from '../../services/firebase.service';
 
 @Component({
   selector: 'app-tics-list',
@@ -7,13 +7,14 @@ import {FirebaseService, TicsAlumno} from "../../services/firebase.service";
   styleUrls: ['./tics-list.component.scss'],
 })
 export class TicsListComponent implements OnInit {
-  alumnos: TicsAlumno[] = [];
+  ticsAlumnos: TicsAlumno[] = []; // Array para almacenar los alumnos
 
   constructor(private firebaseService: FirebaseService) {}
 
   ngOnInit() {
-    this.firebaseService.getTicsAlumnos().subscribe((alumnos) => {
-      this.alumnos = alumnos;
+    // Usar el método correcto para obtener la lista de alumnos
+    this.firebaseService.getTicsAlumnos().subscribe((data) => {
+      this.ticsAlumnos = data; // Asigna los datos recibidos al array
     });
   }
 }

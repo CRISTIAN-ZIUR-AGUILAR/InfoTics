@@ -5,7 +5,7 @@ import { InformaticaFormComponent } from './informatica-form/informatica-form.co
 import {HomeInformaticaComponent} from "./home-informatica/home-informatica.component";
 
 const routes: Routes = [
-  { path: '', component: InformaticaListComponent }, // Esta es la principal para listar
+  { path: 'list', component: InformaticaListComponent }, // Esta es la principal para listar
   { path: 'formularios', component: InformaticaFormComponent }, // Aquí el formulario de registro
   { path: 'formularios/:id', component: InformaticaFormComponent }, // Aquí para editar con ID
   { path: 'home-informatica', component: HomeInformaticaComponent },

@@ -7,7 +7,7 @@ import { TicsListComponent } from './tics-list/tics-list.component';
 const routes: Routes = [
   { path: '', component: HomeTicsComponent },
   { path: 'formularios', component: TicsFormComponent },
-  { path: 'lista', component: TicsListComponent }
+  { path: 'listas', component: TicsListComponent } // Ruta para la lista de TICs
 ];
 
 @NgModule({
