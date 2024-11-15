@@ -1,50 +1,59 @@
-section {
-  background-color: rgba(255, 255, 255, 0); /* Fondo blanco semitransparente para cada sección */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Fondo con imagen y color de superposición */
+.home-informatica-content {
+  background-image: url('https://raw.githubusercontent.com/Pulgarcit0/SysPasteleria/refs/heads/main/assets/img/background.jpg?token=GHSAT0AAAAAAC2FD53NKSAFL6LVT4BP3B3AZZW3CMA'); /* Cambia por la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.background-overlay {
+  background-image: url('https://raw.githubusercontent.com/Pulgarcit0/SysPasteleria/refs/heads/main/assets/img/background.jpg?token=GHSAT0AAAAAAC2FD53NKSAFL6LVT4BP3B3AZZW3CMA'); /* Cambia por la ruta de tu imagen */
+  padding: 20px;
   border-radius: 8px;
-  padding: 60px; /* Espacio interno para que el texto no llegue a los bordes */
-  margin-bottom: 50px; /* Espacio entre secciones */
-  box-shadow: 0 4px 10px rgba(58, 53, 53, 0.11); /* Sombra para hacer las secciones más visibles */
+}
+
+/* Secciones transparentes */
+.section-transparent {
+  background-color: rgba(255, 255, 255, 0); /* Fondo blanco con transparencia */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01); /* Sombra suave */
+}
+
+/* Estilos de texto y títulos */
+.text-primary {
+  color: #003366; /* Azul oscuro */
 }
 
 h2 {
-  color: #003366; /* Azul oscuro para los títulos */
   font-size: 1.5em;
-  margin-bottom: 12px;
   font-weight: bold;
-  text-align: center;
+  margin-bottom: 16px;
 }
 
-p, ul {
+.card-text, ul {
   font-size: 1.1em;
   line-height: 1.6;
-  color: rgba(30, 26, 26, 0.51); /* Texto en gris oscuro */
-  margin: 0 15px; /* Margen lateral en el texto */
+  color: #333;
 }
 
-ul {
-  padding-left: 20px; /* Espacio de sangría para la lista */
+ul li {
+  margin-bottom: 10px;
 }
 
-li {
-  margin-bottom: 8px;
+/* Estilos para el botón */
+.btn-primary {
+  background-color: #0066cc; /* Azul atractivo */
+  color: #fff;
+  border: none;
 }
 
-/* Estilo para el botón */
-.interesado-button {
-  display: block;
-  margin: 30px auto; /* Centrado con separación superior */
-  max-width: 200px; /* Ancho máximo */
-  font-size: 1.1em;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0); /* Azul atractivo */
-  color: rgba(255, 255, 255, 0);
-  padding: 12px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.interesado-button:hover {
-  background-color: rgba(0, 76, 153, 0); /* Cambio de color al pasar el mouse */
+.btn-primary:hover {
+  background-color: #004c99;
 }
