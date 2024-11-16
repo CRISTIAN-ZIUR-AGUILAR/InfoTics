@@ -14,34 +14,31 @@
           </ion-item>
         </ion-list>
 
-        <!-- Módulo Ingeniería en Info -->
-        <ion-list id="Informatica">
-          <ion-list-header>Informática</ion-list-header>
-          <ion-menu-toggle auto-hide="false">
-            <ion-item
-              routerDirection="root"
-              [routerLink]="['/informatica/home-informatica']"
-              lines="none"
-              detail="false"
-              routerLinkActive="selected"
-              [routerLinkActiveOptions]="{ exact: true }">
-              <ion-icon aria-hidden="true" slot="start" name="school-outline"></ion-icon>
-              <ion-label>Informática</ion-label>
-            </ion-item>
+        <!-- Botón Informática (solo en móvil) -->
+        <ion-item
+          *ngIf="isMobile"
+          routerDirection="root"
+          [routerLink]="['/informatica/home-informatica']"
+          lines="none"
+          detail="false"
+          routerLinkActive="selected"
+          [routerLinkActiveOptions]="{ exact: true }">
+          <ion-icon aria-hidden="true" slot="start" name="school-outline"></ion-icon>
+          <ion-label>Informática</ion-label>
+        </ion-item>
 
-            <!-- Botón Registros (solo en web) -->
-            <ion-item
-              *ngIf="!isMobile"
-              routerDirection="root"
-              [routerLink]="['/informatica/list']"
-              lines="none"
-              detail="false"
-              routerLinkActive="selected">
-              <ion-icon aria-hidden="true" slot="start" name="computer-outline"></ion-icon>
-              <ion-label>Registros</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
+        <!-- Botón Registros (solo en web/escritorio) -->
+        <ion-item
+          *ngIf="!isMobile"
+          routerDirection="root"
+          [routerLink]="['/informatica/list']"
+          lines="none"
+          detail="false"
+          routerLinkActive="selected">
+          <ion-icon aria-hidden="true" slot="start" name="desktop-outline"></ion-icon>
+          <ion-label>Registros</ion-label>
+        </ion-item>
+
 
         <!-- Módulo Ingeniería en TICs -->
         <ion-list id="tics">

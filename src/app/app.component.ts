@@ -1,8 +1,6 @@
-import {Component, Inject} from '@angular/core';
-import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
-import {Platform} from "@ionic/angular";
-import {DOCUMENT} from "@angular/common";
+import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -11,23 +9,32 @@ import {DOCUMENT} from "@angular/common";
 export class AppComponent {
   isMobile: boolean = false;
 
-  public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
-  ];
   constructor(private platform: Platform) {
     this.initializeApp();
+    window.addEventListener('resize', this.checkPlatform.bind(this));
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Detecta si es un dispositivo móvil
-      this.isMobile = this.platform.is('mobile') || this.platform.is('mobileweb');
-      console.log('Is mobile:', this.isMobile); // Para verificar en consola
+      this.checkPlatform();
     });
   }
+
+  checkPlatform() {
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    console.log('User Agent:', userAgent);
+
+    // Expresiones regulares para detectar dispositivos móviles
+    const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+
+    this.isMobile = isMobileDevice;
+
+    console.log('Is mobile (custom detection):', this.isMobile);
+  }
+
+
+
+
+
+
 }
