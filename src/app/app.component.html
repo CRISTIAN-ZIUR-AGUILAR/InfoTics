@@ -45,6 +45,7 @@
           <ion-list-header>TICS</ion-list-header>
           <ion-menu-toggle auto-hide="false">
             <ion-item
+              *ngIf="isMobile"
               routerDirection="root"
               [routerLink]="['/tics']"
               lines="none"
@@ -73,7 +74,7 @@
           <ion-menu-toggle auto-hide="false">
             <ion-item
               routerDirection="root"
-              [routerLink]="['/ciencia-de-datos/home-ciencia-de-datos']"
+              [routerLink]="['/ciencia-de-datos/home']"
               lines="none"
               detail="false"
               routerLinkActive="selected">
