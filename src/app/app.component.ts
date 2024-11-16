@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 import {Platform} from "@ionic/angular";
+import {DOCUMENT} from "@angular/common";
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  isMobile: boolean;
+  isMobile: boolean = false;
 
   public appPages = [
     { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
@@ -18,8 +19,15 @@ export class AppComponent {
     { title: 'Trash', url: '/folder/trash', icon: 'trash' },
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },
   ];
-
   constructor(private platform: Platform) {
-    this.isMobile=this.platform.is("mobile")|| this.platform.is("hybrid");
+    this.initializeApp();
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      // Detecta si es un dispositivo móvil
+      this.isMobile = this.platform.is('mobile') || this.platform.is('mobileweb');
+      console.log('Is mobile:', this.isMobile); // Para verificar en consola
+    });
   }
 }
